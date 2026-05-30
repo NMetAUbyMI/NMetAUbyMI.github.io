@@ -1,0 +1,23 @@
+---
+layout: default
+title: "Головна"
+---
+
+<div class="home">
+  <h1 class="page-heading">Ласкаво просимо до мого блогу!</h1>
+  <p>Привіт! Я Микита Іваненко, розробник-початківець, студент групи ПЗ01-24. Тут я публікуватиму свої звіти про вивчення технологій, нові розробки та хід виконання лабораторних робіт.</p>
+
+  <h2>Останні публікації:</h2>
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%d.%m.%Y" }}</span>
+        <h3>
+          <a class="post-link" href="{{ post.url | relative_url }}">
+            {{ post.title | escape }}
+          </a>
+        </h3>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
